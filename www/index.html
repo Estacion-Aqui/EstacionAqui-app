@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Security-Policy" />
+    <meta name="format-detection" content="telephone=no">
+    <!-- <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi, viewport-fit=cover" /> -->
+    <meta name=”viewport” content=” initial-scale=1, maximum-scale=1.0 width=device-width, height=device-height,viewport-fit=cover”>
+    <title></title>
+
+    <link rel="stylesheet" type="text/css" href="nescara/NE_Core.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/custom-dev.css">
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="lib/forcetk.js"></script>
+    <script type="text/javascript" src="lib/sweetalert.min.js"></script>
+    
+    <script type="text/javascript" src="NE_AppConfig.js"></script>
+    <script type="text/javascript" src="NE_BuildScreen.js"></script>
+    <script type="text/javascript" src="NE_AccountManager.js"></script>
+    <script type="text/javascript" src="NE_ContactManager.js"></script>
+    <script type="text/javascript" src="NE_DBManager.js"></script>
+    <script type="text/javascript" src="NE_SyncController.js"></script>
+    <script type="text/javascript" src="NE_QueryController.js"></script>
+    <script type="text/javascript" src="NE_Format.js"></script>
+    <script type="text/javascript" src="nescara/NE_Connection.min.js"></script>
+    <script type="text/javascript" src="nescara/NE_Core.min.js"></script>
+    <script type="text/javascript" src="NE_Application.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700" rel="stylesheet">
+    
+</head>
+
+<body onload="loadPage()">
+    
+    <script type="text/javascript">
+        function loadPage() {
+            document.addEventListener("deviceready", function () { //init app
+                NEApplication.init();
+            });
+            document.addEventListener('deviceready', function () { //exit app
+                var exitApp = false, intval = setInterval(function () { exitApp = false; }, 1000);
+                document.addEventListener("backbutton", function (e) {
+                    e.preventDefault();
+                    if (exitApp) {
+                        clearInterval(intval)
+                        (navigator.app && navigator.app.exitApp()) || (device && device.exitApp())
+                    } else {
+                        exitApp = true
+                    }
+                }, false);
+            }, false);
+            document.addEventListener("pause", function () { //background mode
+                console.log('pause'); 
+            }, false);
+            document.addEventListener("resume", function () {
+                console.log('back');
+            }, false);
+        }
+    </script>
+
+    <!--loading -->
+    <table id="spinner" class="APP_LOADING_VIEW" style="display:none;">
+        <tr>
+            <td>
+                <div class="sk-cube-grid">
+                    <div class="sk-cube sk-cube1"></div>
+                    <div class="sk-cube sk-cube2"></div>
+                    <div class="sk-cube sk-cube3"></div>
+                    <div class="sk-cube sk-cube4"></div>
+                    <div class="sk-cube sk-cube5"></div>
+                    <div class="sk-cube sk-cube6"></div>
+                    <div class="sk-cube sk-cube7"></div>
+                    <div class="sk-cube sk-cube8"></div>
+                    <div class="sk-cube sk-cube9"></div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <!--main div -->
+    <div id="main"></div>
+
+</body>
+
+</html>

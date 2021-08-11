@@ -1,0 +1,743 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('font/OpenSansLight.eot');
+    src: url('font/OpenSansLight.eot?#iefix') format('embedded-opentype'), url('font/OpenSansLight.woff') format('woff'), url('font/OpenSansLight.ttf') format('truetype'), url('font/OpenSansLight.svg#open_sansregular') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('font/OpenSans.eot');
+    src: url('font/OpenSans.eot?#iefix') format('embedded-opentype'), url('font/OpenSans.woff') format('woff'), url('font/OpenSans.ttf') format('truetype'), url('font/OpenSans.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Font Awesome';
+    font-style: normal;
+    src: url("font/icon/fa-regular-400.eot");
+    src: url("font/icon/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("font/icon/fa-regular-400.woff2") format("woff2"), url("font/icon/fa-regular-400.woff") format("woff"), url("font/icon/fa-regular-400.ttf") format("truetype"), url("font/icon/fa-regular-400.svg#fontawesome") format("svg");
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Open Sans';
+}
+
+.NES_WRAPPER {
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    position: fixed;
+    z-index: 95;
+    color: #FFFFFF;
+    transition: left .5s;
+    -webkit-transition: left .5s;
+    transform: translate3d(0, 0, 0);
+}
+
+.NES_MENU_HEADER_CONTAINER {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 0
+}
+
+.NES_MENU_HEADER_LOGO {
+    margin-left: 42px;
+}
+
+.NES_MENU_HEADER_RETURN {
+    float: right;
+	overflow: hidden;
+	filter: invert(100%);
+}
+
+.NES_MENU_PROFILE_CONTAINER {
+    /*padding: 15px 10px;*/
+    overflow: hidden;
+    white-space: nowrap;
+	text-overflow: ellipsis;
+
+	margin: 15px 25px 0px 25px;
+    padding: 0px 0px 10px 0px;
+    border-bottom-style: inset;
+}
+
+.NES_MENU_PROFILE_AVATAR {
+    width: 45px;
+    height: 45px;
+    background-position: center;
+    background-size: cover;
+    float: left;
+    margin-right: 10px;
+}
+
+.NES_MENU_PROFILE_NAME {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 19px;
+    white-space: nowrap;
+    overflow-x: hidden;
+	text-overflow: ellipsis;
+	color: #000000;
+}
+
+.NES_MENU_PROFILE_EMAIL {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 26px;
+    white-space: nowrap;
+    overflow-x: hidden;
+	text-overflow: ellipsis;
+	color: #000000;
+}
+
+.NES_MENU_CUSTOM_CONTAINER {
+    padding: 15px 10px;
+    overflow: hidden;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+	box-sizing: border-box;
+	color: black;
+}
+
+.NES_MENU_CUSTOM_CONTAINER:active {
+	background-color: #046a38 !important;
+	color: white;
+}
+
+.NES_MENU_CUSTOM_IMAGE {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 25px;
+    /* color: #FFF; */
+    float: left;
+    margin-right: 20px;
+	margin-left: 10px;
+	/* COLOR: #000000; */
+}
+
+.NES_MENU_CUSTOM_LABEL {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    /* color: #FFF; */
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 30px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+	box-sizing: border-box;
+	/* color: #000000; */
+}
+
+.NES_MENU_FIXED_CONTAINER {
+    padding: 15px 10px;
+    overflow: hidden;
+    margin-bottom: 2px;
+    white-space: nowrap;
+	text-overflow: ellipsis;
+	color: black;
+}
+
+.NES_MENU_FIXED_CONTAINER:active {
+	background-color: #046a38 !important;
+	color: white;
+}
+
+.NES_MENU_FIXED_IMAGE {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 25px;
+    /* color: #FFF; */
+    float: left;
+    margin-right: 20px;
+	margin-left: 10px;
+	/* color: #000000; */
+}
+
+.NES_MENU_FIXED_LABEL {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    /* color: #FFF; */
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 30px;
+    white-space: nowrap;
+    overflow-x: hidden;
+	text-overflow: ellipsis;
+	/* color: #000000; */
+}
+
+.NES_MENU_VERSION {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+	/* color: #CCCCCC; */
+	color: #000000;
+    font-size: 09px;
+    font-weight: 200;
+    line-height: 30px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    padding: 0 20px;
+    text-align: right;
+}
+
+.NES_MENU_NE_LOGO {
+    float: right;
+	/* padding: 0 20px; */
+	padding: 0 20px 5px 20px;
+    width: 60px;
+}
+
+.NES_WINDOW_STRUCTURE {
+    table-layout: fixed;
+    position: fixed;
+    z-index: 89;
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+.NES_WINDOW_HEADER_MENU {
+    margin: 0;
+    line-height: 0;
+}
+
+.NES_WINDOW_HEADER_TITLE {
+    padding: 0;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 200;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis
+}
+
+.NES_WINDOW_NAVIGATION {
+    padding: 0 15px;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+.NES_WINDOW_NAVIGATION_BOX {
+    table-layout: fixed;
+}
+
+.NES_WINDOW_NAVIGATION_TITLE {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-size: 13px;
+    color: #FFF
+}
+
+.NES_WINDOW_NAVIGATION_LABEL {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-size: 13px;
+    color: #FFF
+}
+
+.NES_WINDOW_CONTENT_OVERFLOW {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    position: absolute;
+    top: 0;
+    z-index: 98
+}
+
+.NES_WINDOW_CONTENT {
+    width: 100%;
+    overflow: hidden
+}
+
+.NES_WINDOW_CONTAINER_MAP {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden
+}
+
+.NES_WINDOW_MAP_CONTROLLER {
+    height: 40px;
+    background-color: #333333;
+    vertical-align: middle;
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.NES_WINDOW_MAP_CONTROLLER_ITEM {
+    display: inline-block;
+    height: 100%;
+    padding: 0 20px;
+    border-right: 1px solid #CCCCCC;
+    background-color: #333333;
+    box-sizing: border-box;
+}
+
+.NES_WINDOW_MAP_CONTROLLER_ITEM_ACTIVE {
+    display: inline-block;
+    height: 100%;
+    padding: 0 20px;
+    border-right: 1px solid #CCCCCC;
+    background-color: #555555;
+    box-sizing: border-box;
+}
+
+.NES_WINDOW_MAP_CONTROLLER_ITEM img,
+.NES_WINDOW_MAP_CONTROLLER_ITEM_ACTIVE img {
+    padding: 13px 0
+}
+
+.NES_WINDOW_MAP_CONTROLLER_SPEEDOMETER {
+    background-color: #555555;
+    float: right;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 12px;
+    display: inline-block;
+    height: 100%;
+    width: 30%;
+    text-align: center;
+    line-height: 60px;
+    padding: 0 20px;
+    overflow: hidden;
+    /*border-left:1px solid #CCCCCC;*/
+    background-color: #333333;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis
+}
+
+.NES_WINDOW_MAP_CONTROLLER_SPEEDOMETER small {
+    font-size: 9px;
+}
+
+.NES_WINDOW_CONTENT_MAP {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 97;
+}
+
+.NES_LOADING_SCREEN {
+    display: none;
+    table-layout: fixed;
+    ;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url('../img/bg.png');
+}
+
+.NES_LOADING_SCREEN_CELL {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.NES_COMPONENT_POPUP_BG {
+    border-spacing: 0;
+    border-collapse: separate;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url('../img/bg.png');
+    opacity: 0;
+    display: none;
+    transition: opacity 1s;
+}
+
+.NES_COMPONENT_POPUP {
+    width: 90%;
+    /* background-image: url('../img/bg.png'); */
+    border-radius: 4px;
+    padding: 10px;
+    margin: auto;
+}
+
+.NES_COMPONENT_POPUP_CONTENT {
+    border-spacing: 0;
+    border-collapse: separate;
+    width: 100%;
+    height: 100%;
+    background-color: #EEEEEE;
+    border-radius: 4px;
+    text-align: center;
+    font-family: 'Open Sans', Helvetica, sans-serif
+}
+
+.NES_COMPONENT_POPUP_TITLE {
+    text-align: center;
+    vertical-align: middle;
+    height: 1;
+    padding: 10px;
+    border-bottom: 1px solid #BBBBBB;
+    background-color: #CCCCCC;
+    border-radius: 4px;
+    color: #333333;
+    font-weight: bold;
+    font-size: 16px
+}
+
+.NES_COMPONENT_POPUP_CONTAINER {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+    padding: 10px 20px;
+    color: #555555
+}
+
+.NES_COMPONENT_POPUP_LOADING {
+    height: 5px;
+    background-color: #EEEEEE;
+    border-top: 1px solid #CCCCCC;
+    padding: 0
+}
+
+.NES_COMPONENT_POPUP_LOADING_BAR {
+    height: 100%;
+    width: 30%;
+    background-color: #0078A8;
+}
+
+.NES_COMPONENT_POPUP_BUTTONS {
+    text-align: center;
+    vertical-align: middle;
+    height: 70
+}
+
+.NES_COMPONENT_POPUP_BUTTON {
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #555555;
+    color: #FFFFFF;
+    margin: 20px 5px;
+    border: 1px solid #666666;
+    box-shadow: 1px 2px 2px #888888;
+    border-radius: 0;
+    padding: 7px 40px;
+    font-size: 14px;
+}
+
+.NES_COMPONENT_POPUP_BUTTON_ACCEPT {
+    background-color: #5CB85C;
+}
+
+.NES_COMPONENT_POPUP_BUTTON_REJECT {
+    background-color: #D9534F;
+}
+
+.NES_COMPONENT_POPUP_BUTTON_NORMAL {
+    background-color: #7070FF;
+}
+
+.NES_CONFIG_FORM {
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.NES_CONFIG_BOX {
+    width: 100%;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.NES_CONFIG_LABEL {
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 5px 15px
+}
+
+.NES_CONFIG_LABEL_VERSION {
+    font-size: 10px;
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: right;
+    color: #CCCCCC
+}
+
+.NES_CONFIG_FIELD {
+    width: 100%;
+    font-size: 22px;
+    border: none;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+
+.NES_CONFIG_FIELD_DISABLE {
+    width: 100%;
+    color: #999999;
+    font-size: 22px;
+    border: none;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+
+.NES_CONFIG_BUTTON_ITEM {
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+    font-size: 22px;
+    border: 1px solid #486828;
+    background-color: #9CB769;
+    box-sizing: border-box
+}
+
+.NES_ACCESS_FORM {
+    padding: 0 12px;
+    box-sizing: border-box;
+}
+
+.NES_ACCESS_TITLE_ITEM {
+    font-size: 16px;
+    padding: 5px 0;
+    box-sizing: border-box
+}
+
+.NES_ACCESS_FIELD_ITEM {
+    font-size: 16px;
+    line-height: 18px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+div.NES_ACCESS_FIELD_LINE {
+    width: 100%;
+    font-size: 22px;
+    border-bottom: 1px solid #999999;
+    padding: 4px;
+    box-sizing: border-box;
+}
+
+input.NES_ACCESS_FIELD_LINE {
+    width: 100%;
+    padding: 10px;
+    font-size: 22px;
+    line-height: 22px;
+    border: 10px solid #999999;
+    box-sizing: border-box;
+}
+
+.NES_ACCESS_BUTTON_ITEM {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    text-align: center;
+    font-size: 22px;
+    border: 1px solid #486828;
+    background-color: #9CB769;
+    box-sizing: border-box
+}
+
+.NES_ACCESS_BUTTON_DISABLE {
+    border: 1px solid #CCCCCC;
+    background-color: #EFEFEF;
+    color: #999999
+}
+
+select.NES_ACCESS_FIELD_ITEM {
+    padding: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-right: 2px solid #9999FF;
+}
+
+.NES_COMPONENT_TOP_COMMAND {
+    background-image: url('img/menu/sconfig.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.NES_COMPONENT_TODAY_DATE {
+    text-align: right;
+    font-size: 26px;
+    padding: 20px 10px 0 10px;
+    letter-spacing: -1px;
+    color: #000000;
+}
+
+.NES_COMPONENT_SELECT_DATE {
+    text-align: right;
+    font-size: 24px;
+    border-radius: 0;
+    letter-spacing: -1px;
+    color: #000000;
+    border: none;
+    border-right: 2px solid #00A7E5;
+    line-height: 24px;
+    padding: 0 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    outline: none;
+}
+
+.NE_LOGIN_FRAG_FORM button {
+    border: none;
+    padding: 15px 25px;
+    border-radius: 7px;
+    background-color: #0F3657;
+    margin-top: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.sk-cube-grid {
+    width: 40px;
+    height: 40px;
+    margin: 100px auto;
+}
+
+.sk-cube-grid .sk-cube {
+    width: 33%;
+    height: 33%;
+    background-color: #FFF;
+    float: left;
+    -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+    animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
+
+.sk-cube-grid .sk-cube1 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.sk-cube-grid .sk-cube2 {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.sk-cube-grid .sk-cube3 {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.sk-cube-grid .sk-cube4 {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+.sk-cube-grid .sk-cube5 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.sk-cube-grid .sk-cube6 {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+
+.sk-cube-grid .sk-cube7 {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.sk-cube-grid .sk-cube8 {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+}
+
+.sk-cube-grid .sk-cube9 {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+    0%,
+    70%,
+    100% {
+        -webkit-transform: scale3D(1, 1, 1);
+        transform: scale3D(1, 1, 1);
+    }
+    35% {
+        -webkit-transform: scale3D(0, 0, 1);
+        transform: scale3D(0, 0, 1);
+    }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+    0%,
+    70%,
+    100% {
+        -webkit-transform: scale3D(1, 1, 1);
+        transform: scale3D(1, 1, 1);
+    }
+    35% {
+        -webkit-transform: scale3D(0, 0, 1);
+        transform: scale3D(0, 0, 1);
+    }
+}
+
+.NEXT_BUTTON_CSS {
+    background-color: #FFFFFF;
+    color: #0F9BFF;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-size: 14px;
+    height: 36px;
+    border-radius: 3px;
+    margin-right: 5px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    border: none;
+}
+
+.APP_LOADING_VIEW {
+	width: 100%; height: 100%;
+	position: fixed;
+	top:0;left:0;
+	z-index: 9999;
+	overflow:hidden;
+	table-layout: fixed;
+	background-color: rgba(0,0,0,.7);
+	display:none;
+}
+
+.APP_LOADING_VIEW td{
+	text-align:center;
+	vertical-align:middle;
+	overflow:hidden;
+	width:100%;
+}
+
+.APP_LOADING_DESC{
+	width:100%;
+	box-sizing:border-box;
+	padding:5px 40px;
+	white-space: nowrap;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-size: 14px;
+	color: white;
+	text-shadow: 1px 1px 3px #222222;
+	font-weight: 200;
+}
