@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>HelloCordova</name>
+    <name>EstacionAqui</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        O EstacionAqui! é uma ferramenta de gerenciamento e utilização de vagas de estacionamentos privados, fazendo a analise da utilização das vagas e disponibilizando as mesmas conforme os usuários chegam ao local, sendo possível reservar a vaga quando chegar na proximidade do local, visualizar as vagas disponíveis antes de ir ate o local, além de facilitar a utilização pela equipe de eventos com gráficos e gerenciamento do estacionamento.
     </description>
     <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+        Modular Company
     </author>
     <content src="index.html" />
     <access origin="*" />
